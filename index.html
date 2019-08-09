@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="chrome">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+
+        img {
+            float: left;
+            margin: 1em;
+        }
+
+        .leftbox {
+            float: left;
+            width: 300px;
+        }
+
+        .rightbox {
+            float: right;
+            width: 300px;
+        }
+
+        ul {
+            clear: both;
+
+        }
+
+        #myheader {
+            border: solid 1px;
+            height: 40px;
+
+        }
+
+        #myheader li {
+            display: inline;
+            padding: 5em;
+            text-align: center;
+        }
+    </style>
+    <header id='myheader'>
+        <ul>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Privacy</li>
+        </ul>
+    </header>
+
+    <h1>Hi, I am David Lee</h1>
+    <h2>Welcome to my personal home page.</h2>
+    <img src="https://source.unsplash.com/random" alt="A random image" width=300>
+    
+    <div class="leftbox">
+            <h3>Professional review section</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deserunt atque deleniti doloribus laboriosam error officia porro nemo natus corrupti nostrum, distinctio, repellat aperiam voluptatibus dignissimos impedit voluptate? Soluta, eligendi.</p>
+    </div>
+    <div class="rightbox">
+            <h3>Non-professional stuffs</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deserunt atque deleniti doloribus laboriosam error officia porro nemo natus corrupti nostrum, distinctio, repellat aperiam voluptatibus dignissimos impedit voluptate? Soluta, eligendi.</p>
+    </div>  
+    
+    <ul id='todolist'>
+        <li>Teach class</li>
+    </ul>
+
+    <script>
+        // get a reference to my todolist
+        let todos = document.getElementById('todolist');
+        let moreTodos = ['Walk Chance', 'Feed Scout'];
+        moreTodos.map(x =>{
+            let newLi = document.createElement('li');
+            newLi.textContent = x;
+            todos.appendChild(newLi)
+        })
+    </script>
+    
+
+</body>
+</html>
